@@ -1,0 +1,2398 @@
+{
+  "id": "76663b48-2123-4416-8a20-3d4f381f1e9c",
+  "appName": "hello_agent",
+  "userId": "user",
+  "state": {
+    "__session_metadata__": {
+      "displayName": "{\"placeholder\": \"refine the text: the qucik bro..."
+    },
+    "middle_b_output": {
+      "placeholder": "Task completed successfully."
+    },
+    "leaf_b1_output": {
+      "placeholder": "the quick brown fox"
+    }
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"placeholder\": \"refine the text: the qucik brown fix both from a grammar perspective as well as a content perspective\"}"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": ""
+      },
+      "id": "25e4afee-31be-4e5c-aa13-36d22bb65993",
+      "timestamp": 1787661281.726253
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_220645",
+              "args": {
+                "placeholder": "refine the text: the qucik brown fix both from a grammar perspective as well as a content perspective"
+              },
+              "name": "middle_b"
+            },
+            "thoughtSignature": "El4KXAERTTIPkgdTHgHwnPLRHmU2zT2B9GUZK1obZqSBqbJ5LF9zG-pZ81Vgg6pL2XadXkfj-n9A2gcWAZvrOCUQhkyN5m69jQzHH8jSuF8mMKO5dsKU0dg85iIm_Gwj"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 36,
+        "promptTokenCount": 330,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 330
+          }
+        ],
+        "totalTokenCount": 366
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "hello_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1"
+      },
+      "longRunningToolIds": [],
+      "id": "413fa5e9-d22e-459a-b211-87e6617bd78c",
+      "timestamp": 1787661281.7350888
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_408757",
+              "args": {
+                "placeholder": "the qucik brown fix"
+              },
+              "name": "leaf_b1"
+            },
+            "thoughtSignature": "El4KXAERTTIPTwsSJfzz8uetVCnlbDl577FyoZ8ONjJRc7d-dbi9-y7bbDQRDa0QfYcRk1pJd20Or-wfPD6NYTyBsuE76PbKeVA3_pvAx3nM6SY_Vq4YSSOteg9XO3rY"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 21,
+        "promptTokenCount": 421,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 421
+          }
+        ],
+        "totalTokenCount": 442
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645",
+      "id": "5b96435b-6f47-4982-a18f-f5964b5ba9e9",
+      "timestamp": 1787661282.898082
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_277909",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPDeuCd1VhjoMcWIqWbuMtKT3bT_eTzDQpyyCtXoKVe2I3vRZccPTUQSTutWZr1tCzC8t4sw2KnKlUNiukO4HezVSV-16CUIXxjm_FdrclSxk_uM4baBYn"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 155,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 155
+          }
+        ],
+        "totalTokenCount": 177
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757",
+      "id": "df74bce6-c4f2-432c-a71b-4052d548ab1c",
+      "timestamp": 1787661283.593934
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_277909",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757",
+      "id": "5b2c6a4c-9694-47e9-892b-0fa198d6b264",
+      "timestamp": 1787661333.766269
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_203700",
+              "args": {
+                "placeholder": "the qucik brown fix"
+              },
+              "name": "leaf_b2"
+            },
+            "thoughtSignature": "El4KXAERTTIPB0QfPygSUiipc2XrXu8kZ1bCpcBmgi77Pn8EtS8KzejR8ShxHi6NT1eG6Bp5H9-Wq2TsboA31-v1R72QYqzUeA6B04LhOy__kfbNhgcQ24Dgoy8Cj_Im"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 21,
+        "promptTokenCount": 463,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 463
+          }
+        ],
+        "totalTokenCount": 484
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757",
+      "id": "7fbc03ac-720a-4b7d-b44a-674255291488",
+      "timestamp": 1787661333.775986
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_364274",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPkyIJpuu4zAcF0Srx-munYT1vedaGBCpQyQS0bUVnEB4eiM8qEwCkP-eiIN2lRuTN9y--Dv5V85TrXE-6cQMRcsuXoqT4l_kIwlIckuu0jya_Wh7SLZOg"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 155,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 155
+          }
+        ],
+        "totalTokenCount": 177
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b2",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700",
+      "id": "f08d067c-336f-4d51-aff0-06e5f82a0f70",
+      "timestamp": 1787661334.403713
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_364274",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b2",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700",
+      "id": "e77d586b-95c9-45df-8ac9-024e5134533e",
+      "timestamp": 1787661335.1625988
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_168561",
+              "args": {
+                "placeholder": "the quick brown fox"
+              },
+              "name": "leaf_b1"
+            },
+            "thoughtSignature": "El4KXAERTTIPbrHNzmzG8SvgpTkrIXO5Wfrzp4ADXR-7-n6mrTyyBHxGNKa3kRskjXmfyZj-IgNyOtmqZv0N1qXwnqs6VASWXbTbY9CpFVrxi08Q6EjcLt4ih-Ci8dCt"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 20,
+        "promptTokenCount": 463,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 463
+          }
+        ],
+        "totalTokenCount": 483
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700",
+      "id": "a19e6def-3a9d-4c82-91ed-aa80df3cbd07",
+      "timestamp": 1787661335.172517
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_330834",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPFSUBugj_VGnpyusHGNFWiebyKTy-J7DVMBmFSTYgw5DwHVOkZozMYvAV7oNXK_Bd5Jl4xsi7s3Qp3YpxDe65A4waiEPVVy3161Hvo3x4XyQRkRHhwTNe"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 154,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 154
+          }
+        ],
+        "totalTokenCount": 176
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561",
+      "id": "93e5a1f0-25f7-4239-b2d6-5e2e3dc0ad9a",
+      "timestamp": 1787661336.121921
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_330834",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561",
+      "id": "4baaf405-6879-4ece-bee4-9eef8229b402",
+      "timestamp": 1787661336.8756301
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_234604",
+              "args": {
+                "placeholder": "the quick brown fox"
+              },
+              "name": "leaf_b1"
+            },
+            "thoughtSignature": "El4KXAERTTIP78PaKhmSMcTIPUhTEwjoXcjdfuAKW3V39HSg0ywgy7rPqfBENuLfOIK6cUptwj1Xe0qu8HXXaJTBcgJZkNJGcbhaHihYnjXfHB3PRiJmM9jpjOLuLgXv"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 20,
+        "promptTokenCount": 462,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 462
+          }
+        ],
+        "totalTokenCount": 482
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561",
+      "id": "2fae176c-ae76-46e7-b6b8-4d8d184e8416",
+      "timestamp": 1787661336.8851562
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_283493",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPiU07Z_8JflFRyXG2W2Y52VdqawbWIHdOioj8eLzrvY8py6Uq9-jibTxttBklsbol5WWG6LHMoK6ZkvvlhhsJsGa90Sliq-VuWXyadmOpPOGQZmrzwqEL"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 154,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 154
+          }
+        ],
+        "totalTokenCount": 176
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604",
+      "id": "bacaeea4-5e13-4438-870b-3e90d3323123",
+      "timestamp": 1787661337.524825
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_283493",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604",
+      "id": "49c55278-c1ac-40b7-b7e1-d93adf927090",
+      "timestamp": 1787661358.616288
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_359488",
+              "args": {
+                "placeholder": "the quick brown fox"
+              },
+              "name": "leaf_b1"
+            },
+            "thoughtSignature": "El4KXAERTTIP0Dbc-uBJ6wbImPX0pCfuyxmMoVDz081xPUJwc5UHT9jy7583pID7HmdMwY4Wq-FR8JDsZr7afKtXlB3k4YH61Nwh3Hgqs6znFAhSmkbgffE0FHQDOhMm"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 20,
+        "promptTokenCount": 462,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 462
+          }
+        ],
+        "totalTokenCount": 482
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604",
+      "id": "d0eb6ba1-bd9c-46ea-a159-bb3b4984c548",
+      "timestamp": 1787661358.625918
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_65117",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPiD1hvDcDIHUiAXlQpqpz_jXk8dwPDJb3IJ3AZYiIn55bmgzbTJB-4SAYI_MjhBKHBuH4kOui6yPGoweHtWok5Q7c5GFPFX7C6-NWYfW2wwwg4M3Uf4C6"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 154,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 154
+          }
+        ],
+        "totalTokenCount": 176
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488",
+      "id": "191a2f24-1e4f-494c-b609-38815560b7e5",
+      "timestamp": 1787661359.503893
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_65117",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488",
+      "id": "88e54d10-b9ea-4008-a930-26dd8a46de27",
+      "timestamp": 1787661367.2582898
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_165095",
+              "args": {
+                "placeholder": "the quick brown fox"
+              },
+              "name": "leaf_b1"
+            },
+            "thoughtSignature": "El4KXAERTTIPt0k8gGza4GXczvpY4bZktx3qEhX4Xdhs3VsKEsiFkWtPBxlw74pT6ZAU2fAdSaHtjZI7UIugavSyNXyrJkfL_EXGQJ008U2u5H5b-7AsWC75sACxBgOE"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 20,
+        "promptTokenCount": 462,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 462
+          }
+        ],
+        "totalTokenCount": 482
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488",
+      "id": "07618769-59ea-4f95-9217-c0a4cf6cf739",
+      "timestamp": 1787661367.26798
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_283489",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPc3w3dTqICW9DDqNUnJtxRzxMXbJx6sDc4l-IbMDrVFSXlrKeU4SOQWEPlsS69hK9_4ynSb_fSU8Vk3HGxPhzDDs3DRwKpWa1WrAEgeDPvfVNq87Il9Yz"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 154,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 154
+          }
+        ],
+        "totalTokenCount": 176
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b1@call_165095",
+      "id": "1f385b31-24fd-4624-ae74-eec6fa50b089",
+      "timestamp": 1787661367.837185
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_283489",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b1@call_165095",
+      "id": "f7267b3f-32e3-44f2-9b19-7c85c8b6f6e6",
+      "timestamp": 1787661368.596247
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_462836",
+              "args": {
+                "placeholder": "the quick brown fox"
+              },
+              "name": "set_model_response"
+            },
+            "thoughtSignature": "El4KXAERTTIPMkD-AzPMmHnE3Ts8HlQnJkI5d1qo16RzUzbQYIHTnHPTYmob9Yd51zsFHbhFtZWOlwoWaDLIsCiyNhDLcL7sKDs7APrYCFl7i9rDcp7iEdHVV6F-HMnI"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 21,
+        "promptTokenCount": 462,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 462
+          }
+        ],
+        "totalTokenCount": 483
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b1@call_165095",
+      "id": "48fa0c46-ca87-4b12-b413-965b8cb2bb66",
+      "timestamp": 1787661368.605624
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_462836",
+              "name": "set_model_response",
+              "response": {
+                "placeholder": "the quick brown fox"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {},
+        "setModelResponse": {
+          "placeholder": "the quick brown fox"
+        }
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b1@call_165095",
+      "id": "5762a0b1-0c3b-4302-8ec1-1da53e412e5a",
+      "timestamp": 1787661369.2292328
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"placeholder\": \"the quick brown fox\"}"
+          }
+        ],
+        "role": "model"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {
+          "middle_b_output": {
+            "placeholder": "the quick brown fox"
+          },
+          "leaf_b1_output": {
+            "placeholder": "the quick brown fox"
+          }
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1",
+        "outputFor": [
+          "hello_agent@1/middle_b@1/leaf_b1@1"
+        ],
+        "messageAsOutput": true
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b1@call_165095",
+      "id": "746c0d7a-3300-41e2-bd0a-838445507c2e",
+      "timestamp": 1787661369.2327092
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_514741",
+              "args": {
+                "placeholder": "Task completed successfully."
+              },
+              "name": "set_model_response"
+            },
+            "thoughtSignature": "El4KXAERTTIP4YRtdy6LPEcJ8iOKB03WpcEeyvqv0Gu0Weh0MFyf1ar4DAy4DdCyJ48CnpCLJ4o1n2XAwGL1KdxAmiqMQ_1BuqjJULtMztv7Uak-hqq3f5As97oXijqJ"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 21,
+        "promptTokenCount": 532,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 532
+          }
+        ],
+        "totalTokenCount": 553
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b1@call_165095",
+      "id": "50cc699e-4178-4a98-a3f3-f41cff1f647e",
+      "timestamp": 1787661369.242173
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_514741",
+              "name": "set_model_response",
+              "response": {
+                "placeholder": "Task completed successfully."
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {},
+        "setModelResponse": {
+          "placeholder": "Task completed successfully."
+        }
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b1@call_165095",
+      "id": "c80f2457-1130-492d-9913-7bb6e6d3cf0f",
+      "timestamp": 1787661369.80296
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"placeholder\": \"Task completed successfully.\"}"
+          }
+        ],
+        "role": "model"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {
+          "middle_b_output": {
+            "placeholder": "Task completed successfully."
+          }
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1",
+        "outputFor": [
+          "hello_agent@1/middle_b@1"
+        ],
+        "messageAsOutput": true
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b1@call_165095",
+      "id": "3adf3fed-fd25-4970-a692-7ddc9daee74a",
+      "timestamp": 1787661369.825749
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_165095",
+              "name": "leaf_b1",
+              "response": {
+                "placeholder": "Task completed successfully."
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488",
+      "id": "fe38f00d-5508-4b68-bc2c-9b07884cef70",
+      "timestamp": 1787661369.829674
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_308284",
+              "args": {
+                "placeholder": "Task completed successfully."
+              },
+              "name": "leaf_b2"
+            },
+            "thoughtSignature": "El4KXAERTTIPvLscN5WSCQOMlz-VgOhRekyHzsCT3jYhWrxG4inWBjbe2ha4dtyCJwkhSbE4jduIExzx-IFxeJIUzDkHNtaSFLireErtfC4MW_l25pA8QA5Kov_RHXuT"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 20,
+        "promptTokenCount": 500,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 500
+          }
+        ],
+        "totalTokenCount": 520
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488",
+      "id": "01657808-54b9-40ab-82dd-b4ff88276aba",
+      "timestamp": 1787661369.843132
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_101311",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPfaHbPaZYmLU4gP5UOqaM33sUA95P0ncH8xBTPWblGG17sdQRQYX-acnBOvm2cGkm6YcyCYRrPcCp3FmuOdgPDSJtO7R_qYAR8K_E0VXleVZesC37t0uO"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 154,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 154
+          }
+        ],
+        "totalTokenCount": 176
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b2",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284",
+      "id": "062291e6-97f6-4a09-9821-ca36a7c79b07",
+      "timestamp": 1787661370.3755672
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_101311",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b2",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284",
+      "id": "fbe7aebf-8cfa-4586-b7c0-abe6af17e046",
+      "timestamp": 1787661371.144057
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_192626",
+              "args": {
+                "placeholder": "Drafting text for the user task."
+              },
+              "name": "leaf_b1"
+            },
+            "thoughtSignature": "El4KXAERTTIPhi1DxNUPsDWVlQplJcEQ0_Sd4I50fajsbDRNDtxWOk3ZsghZHCZWncOpbas6jayoyiw-C8KY0pl7e9u7LNQLL1hR0v3yEszLdR9fy1M5jVkCwIf3G91a"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 24,
+        "promptTokenCount": 462,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 462
+          }
+        ],
+        "totalTokenCount": 486
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284",
+      "id": "8ba0997b-37bd-4e6c-a1a7-81fec5d2d5cb",
+      "timestamp": 1787661371.153662
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_141095",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPt0vNqSYu5FxLU6ExvDBkBbgjwJ9EQ-oFXVwiFj1jDB1f2539OryjgjDCe9v8CF7P_7Jl1kV79h2C_sG6UgNoLYRxekct4ThZwjt_hjidzijUvO5bfbRI"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 158,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 158
+          }
+        ],
+        "totalTokenCount": 180
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626",
+      "id": "5e9b6e98-e1ca-49b8-9315-cfc8704e485a",
+      "timestamp": 1787661371.712883
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_141095",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626",
+      "id": "e301e8fa-b96f-4e5d-bb0c-3ecbcc718a05",
+      "timestamp": 1787661372.435144
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_111985",
+              "args": {},
+              "name": "leaf_b1"
+            },
+            "thoughtSignature": "El4KXAERTTIPhv_HIQ26KjhbcJuxiqyxw_jMhLrG2yees72yXx1Hrqw4IQFaFG4CMtr6gpOvOIAsFyoOlxVNu6868dg6dr9-j0_Ak4Dj4xVhkX1w5c8rZUgUAI-n0x5o"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 11,
+        "promptTokenCount": 466,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 466
+          }
+        ],
+        "totalTokenCount": 477
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626",
+      "id": "ff3d8c59-c892-443f-b60b-620c08d22bf0",
+      "timestamp": 1787661372.446073
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_151332",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPgFJMBYxP8yOccMmaPTUZ0cHDW9p8PX4btY6r6pGkOwMYxYLQdQtHf36WFiSh8hNk_dHQKqpTA5o3bNBUXjUNEexxJbJ3W0bCw3TxEWH1p7uqS3QU6Hcp"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 149,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 149
+          }
+        ],
+        "totalTokenCount": 171
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985",
+      "id": "c04052e5-a300-4089-8c0f-29313446af63",
+      "timestamp": 1787661372.938422
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_151332",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985",
+      "id": "a8af07d8-97b3-4357-afdc-3b20316dff24",
+      "timestamp": 1787661373.82607
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_212501",
+              "args": {
+                "placeholder": "Drafting content for the task"
+              },
+              "name": "leaf_b1"
+            },
+            "thoughtSignature": "El4KXAERTTIPP55jujslEQK5eW8tzo9gVw2LJfVJD61kPywae-kKjaxBWt2J2fC8syfOSTnH2obybXXRUnnYxPPHgsApNRgMXO2fsUiDMqoHwS3FfiQzustpEHIGdsud"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 457,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 457
+          }
+        ],
+        "totalTokenCount": 479
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985",
+      "id": "d05da42f-c5ca-4922-b99e-ae831bd7929a",
+      "timestamp": 1787661373.8359418
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_322286",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPvLlIEKpDhW2BYfjtj2QdfF4ycsf1sd6mdHdtV2sejjnms94SiEuNZClN5UEwVIifhnvY6wW3nsVkLs_-doAW5_hrGUbAez1ZFWWjdlOoZI4veSxTl6w7"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 156,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 156
+          }
+        ],
+        "totalTokenCount": 178
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985.leaf_b1@call_212501",
+      "id": "8ae32c9e-90fa-4c5f-bd2e-e1434279ca5e",
+      "timestamp": 1787661374.4760242
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_322286",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985.leaf_b1@call_212501",
+      "id": "42ca2443-e19e-4c7b-a646-485ee486636c",
+      "timestamp": 1787661375.306224
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_411431",
+              "args": {
+                "placeholder": "Drafting initial content"
+              },
+              "name": "leaf_b1"
+            },
+            "thoughtSignature": "El4KXAERTTIPTXQrATuQUvvEijrcLylDBfZng-yBOuMQNLawgX6UC2Pcj4IKr-Vpd7vRbeuTm0MYZOLlXV3P55tHuqh0bQJ_FdswtGA-aD14-rLiiwvbb3JBPX1ffmGy"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 20,
+        "promptTokenCount": 464,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 464
+          }
+        ],
+        "totalTokenCount": 484
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985.leaf_b1@call_212501",
+      "id": "91405606-94bd-41d4-9daa-35e6e6723e69",
+      "timestamp": 1787661375.316213
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_344742",
+              "args": {
+                "agent_name": "middle_b"
+              },
+              "name": "transfer_to_agent"
+            },
+            "thoughtSignature": "El4KXAERTTIPFP0amT0BHA1QYeyXehGmu8VgqkNEaCJlSKLW8_34ggrARr0ks2qVZf9giqQry1JXUGL6QuROeyKOaTfKVDqB319ZVLSJAPfd4ISEOSvjRopIQaycQbFl"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 22,
+        "promptTokenCount": 154,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 154
+          }
+        ],
+        "totalTokenCount": 176
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985.leaf_b1@call_212501.leaf_b1@call_411431",
+      "id": "162684d3-bf3f-42cd-97e6-b996144440ef",
+      "timestamp": 1787661375.9481301
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_344742",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "middle_b",
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985.leaf_b1@call_212501.leaf_b1@call_411431",
+      "id": "867099fd-cb3d-42cb-9a7b-263e821cea87",
+      "timestamp": 1787661376.672734
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 43.145457833s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b1",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985.leaf_b1@call_212501.leaf_b1@call_411431",
+      "id": "b7b67a99-e939-4783-a7f7-66c5e9d43027",
+      "timestamp": 1787661376.7756832
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_411431",
+              "name": "leaf_b1",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b1 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985.leaf_b1@call_212501",
+      "id": "8b78363d-6a42-4848-8cc9-c54d45c6ab23",
+      "timestamp": 1787661376.7799208
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 43.0321493s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985.leaf_b1@call_212501",
+      "id": "8ef372b9-3fa0-4f91-bd6d-f88979666b6a",
+      "timestamp": 1787661376.8813272
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_212501",
+              "name": "leaf_b1",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b1 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985",
+      "id": "bd3cff37-89d8-404a-862d-d8de0c783e72",
+      "timestamp": 1787661376.884935
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 42.928086724s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '42s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626.leaf_b1@call_111985",
+      "id": "e6fba6bf-4409-4286-8f32-bc33c8d45313",
+      "timestamp": 1787661376.992511
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_111985",
+              "name": "leaf_b1",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b1 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626",
+      "id": "a35ac2ee-d2ec-4ff0-91f4-a836898b229e",
+      "timestamp": 1787661376.99765
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 42.802178968s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '42s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b1@call_192626",
+      "id": "2a0e4352-c199-40a4-af4d-a44556f4aa75",
+      "timestamp": 1787661377.110718
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_192626",
+              "name": "leaf_b1",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b1 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284",
+      "id": "929fea48-2e58-4dda-adb2-3ac7caf21ff9",
+      "timestamp": 1787661377.115059
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_192217",
+              "args": {
+                "placeholder": "Proofreading text."
+              },
+              "name": "leaf_b2"
+            },
+            "thoughtSignature": "El4KXAERTTIPoiE37yPCbNmgUu2x8DWaBO31gBriXziLD9yuLQk67nuHienlqwru4qe8E6vQAEFP_Rq4d0AGmIWHZ60e944-xBGWQH5dqNxBQe5ySRSsLuBv2QU75m9Q"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 20,
+        "promptTokenCount": 513,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 513
+          }
+        ],
+        "totalTokenCount": 533
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284",
+      "id": "454ace31-7af5-4a89-8c0c-0334f45b3a61",
+      "timestamp": 1787661377.124059
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 41.917779258s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '41s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b2",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284.leaf_b2@call_192217",
+      "id": "45e9f9c2-4863-483d-9af1-dddb37eb1182",
+      "timestamp": 1787661377.98793
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_192217",
+              "name": "leaf_b2",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b2 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284",
+      "id": "7c27811d-e8c9-4916-aaa7-18b9fa31de3e",
+      "timestamp": 1787661377.9914508
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 41.829709297s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '41s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488.leaf_b2@call_308284",
+      "id": "00e40bb8-0cae-4c30-b2e6-f20660f51f61",
+      "timestamp": 1787661378.077176
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_308284",
+              "name": "leaf_b2",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b2 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488",
+      "id": "1da326dc-61f8-426b-ad20-c3848f31a6d1",
+      "timestamp": 1787661378.080728
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 41.733942976s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '41s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b1@call_359488",
+      "id": "fcff4ad1-e900-443d-bc40-7997588e17bf",
+      "timestamp": 1787661378.181674
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_359488",
+              "name": "leaf_b1",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b1 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604",
+      "id": "a41d695f-fdef-4b73-8ddc-4a341e398627",
+      "timestamp": 1787661378.185295
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_554823",
+              "args": {
+                "placeholder": "the quick brown fox"
+              },
+              "name": "leaf_b2"
+            },
+            "thoughtSignature": "El4KXAERTTIPbJpmt8Kq9DRjw8hKYVA6YB5xIoMAxvMyHzOhuM2WNf2_IRTvwuzJB2tfRH5k2AVvK0mDrZvRunfmbAkmRz0rmWonNGVZfN-JQLDqkIn9rQmPD2Id3oft"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 20,
+        "promptTokenCount": 509,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 509
+          }
+        ],
+        "totalTokenCount": 529
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "longRunningToolIds": [],
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604",
+      "id": "70ccf334-3387-4866-9352-32b8ccb17e9e",
+      "timestamp": 1787661378.196207
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 40.694095988s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "leaf_b2",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604.leaf_b2@call_554823",
+      "id": "0ae4ef8c-dd81-4b85-9bb9-1c82baf7950a",
+      "timestamp": 1787661379.219949
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_554823",
+              "name": "leaf_b2",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b2 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604",
+      "id": "8856f1c7-59ce-4c48-b34d-96b9324d7d8f",
+      "timestamp": 1787661379.2237382
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 40.588017594s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561.leaf_b1@call_234604",
+      "id": "97d01eb1-92d5-4d66-8cc7-b260a540cf23",
+      "timestamp": 1787661379.3194702
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_234604",
+              "name": "leaf_b1",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b1 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561",
+      "id": "7aa6514e-a4b7-4593-a9e7-cbd78525889c",
+      "timestamp": 1787661379.322477
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 40.500300495s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700.leaf_b1@call_168561",
+      "id": "319b72ce-9a63-4696-bd3e-5c064264cbd1",
+      "timestamp": 1787661379.4065049
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_168561",
+              "name": "leaf_b1",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b1 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700",
+      "id": "adba3663-d64f-4349-aece-dbbda4ff618f",
+      "timestamp": 1787661379.409975
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 40.408658089s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b2@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757.leaf_b2@call_203700",
+      "id": "3834d73c-0b74-48f3-b81d-4bfe0034498a",
+      "timestamp": 1787661379.512502
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_203700",
+              "name": "leaf_b2",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b2 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757",
+      "id": "12f565f8-0548-4b9d-9733-e9a233029434",
+      "timestamp": 1787661379.515989
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 40.30108933s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1/leaf_b1@1"
+      },
+      "branch": "middle_b@call_220645.leaf_b1@call_408757",
+      "id": "78724a91-9f1e-4a33-afec-e6c398537226",
+      "timestamp": 1787661379.6179829
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_408757",
+              "name": "leaf_b1",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node leaf_b1 failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1"
+      },
+      "branch": "middle_b@call_220645",
+      "id": "ffd85965-3e75-4777-aa27-893e4750ac78",
+      "timestamp": 1787661379.625582
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 40.179573863s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "middle_b",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1/middle_b@1"
+      },
+      "branch": "middle_b@call_220645",
+      "id": "45441ef8-7396-41d8-b3a2-7f4a09420bdd",
+      "timestamp": 1787661379.725088
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_220645",
+              "name": "middle_b",
+              "response": {
+                "result": "Error running sub-agent: Dynamic node middle_b failed"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "hello_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1"
+      },
+      "id": "213c0e85-dcc4-4181-a2cf-f0e3a851aa5f",
+      "timestamp": 1787661379.729248
+    },
+    {
+      "errorCode": "_ResourceExhaustedError",
+      "errorMessage": "\nOn how to mitigate this issue, please refer to:\n\nhttps://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted\n\n\n429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 40.028560825s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}",
+      "invocationId": "e-05d1b47e-589d-4c7e-b25c-a960e785daa4",
+      "author": "hello_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "hello_agent@1"
+      },
+      "id": "027c6ebb-542e-48f9-ada4-8a7940b77d86",
+      "timestamp": 1787661379.875506
+    }
+  ],
+  "lastUpdateTime": 1787661379.875506
+}
