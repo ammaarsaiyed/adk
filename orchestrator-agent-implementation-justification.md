@@ -512,3 +512,54 @@ repository suite passed 7 tests plus 7 subtests.
 > typed call whose result returns to the orchestrator, and Python enforces the
 > capability set, one-call-per-specialist rule, step budget, and single terminal
 > response.
+
+## Concise architectural justification
+
+The implementation provides agent-as-tool behavior without giving a specialist
+the conversation or leaving repeated tool selection inside an unbounded parent
+LLM loop. A root `Workflow` runs one controller. On each step, the
+`orchestrator` agent either selects `math`, `science`, or `english`, or returns
+the final answer. The controller awaits the selected specialist with
+`Context.run_node()`, records its result, prevents that specialist from running
+again, and passes all completed results into the orchestrator's next decision.
+The terminal node alone renders the response.
+
+The distinct native ADK structures are `Workflow` for a deterministic terminal
+boundary and `@node(rerun_on_resume=True)` with `Context.run_node()` for
+supervised dynamic call/return. The orchestrator and specialists use
+`mode="single_turn"` because each invocation is a bounded task rather than a
+conversation. Structured task, decision, and result contracts define the data
+passed between these calls; the logic does not depend on shared chat history or
+persistent state.
+
+The main references are ADK's
+[`Context.run_node()` API](https://github.com/google/adk-python/blob/54493140a6697af5b82e03b9d7ecb77c15df4eb6/src/google/adk/agents/context.py#L424-L477)
+and official
+[`dynamic_nodes` sample](https://github.com/google/adk-python/blob/54493140a6697af5b82e03b9d7ecb77c15df4eb6/contributing/samples/workflows/dynamic_nodes/agent.py),
+which establish awaited dynamic execution inside Workflow-owned control. The
+official
+[`input_output_schema` sample](https://github.com/google/adk-python/blob/54493140a6697af5b82e03b9d7ecb77c15df4eb6/contributing/samples/core/input_output_schema/agent.py)
+provides the typed specialist call/return precedent. The
+[`market-research-agent`](https://github.com/google/adk-samples/blob/30bb11aa40db0705a11859eda2cc3fa7ca7dfa7e/contrib/python/market-research-agent/app/agent.py)
+provides the conceptual pattern of an orchestrator consulting specialists and
+synthesizing their results, while the
+[`custom orchestrator` example](https://github.com/rominirani/adk-workflow-patterns/blob/63584e6ce1aa6d8fd70802058cdd857f075d9f4f/collaborative-workflows/examples/04_custom_orchestrator.py)
+supports programmatic ownership of routing and completion.
+
+The main alternatives were rejected as follows:
+
+- Chat-mode sub-agents were unsuitable because they transfer response
+  ownership.
+- Automatic single-turn sub-agent tools are appropriate for a simple
+  conversational coordinator, but the parent LLM may still repeat a completed
+  call.
+- Explicit `AgentTool(...)` was not used because current
+  [`AgentTool` guidance](https://github.com/google/adk-python/blob/54493140a6697af5b82e03b9d7ecb77c15df4eb6/src/google/adk/tools/agent_tool.py#L108-L127)
+  discourages direct construction and it retains the same parent tool loop.
+- A fixed sequence would run irrelevant specialists; parallel fan-out would be
+  incorrect when later work depends on earlier output.
+- An unbounded dynamic loop was rejected because termination would again rely
+  only on model compliance.
+
+The resulting split is deliberate: the LLM owns expertise selection and final
+synthesis, while the Workflow owns execution, uniqueness, and termination.

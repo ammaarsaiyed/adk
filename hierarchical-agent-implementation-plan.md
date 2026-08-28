@@ -413,3 +413,49 @@ The table also defines the change boundary: replacing the manager prompts or
 specialist capabilities is safe when the contracts remain intact, but restoring
 a chat root, implicit history, unbounded tool loops, persistent result mailboxes,
 or mandatory execution of every child would invalidate the trace-backed design.
+
+## Concise architectural justification
+
+The implementation is a selective, bounded hierarchy in which LLMs decide the
+next useful action but do not own execution or termination. A root `Workflow`
+runs a controller that repeatedly asks `root_manager` either to finish or to
+select one department. Each department is another `Workflow` using the same
+controller/manager pattern for its specialists. The selected child is awaited
+with `Context.run_node()`, its result is returned to the controller, and the
+root's terminal renderer emits the single final response.
+
+The principal ADK structures are `Workflow` for structural completion,
+`@node(rerun_on_resume=True)` plus `Context.run_node()` for selective dynamic
+calls, and `Event(state=...)` with invocation-scoped `temp:` keys for explicit
+context propagation. Managers and workers run as stateless single-turn agents,
+so prior conversation events do not implicitly influence later routing. This
+combination follows the official
+[`dynamic_nodes` sample](../adk-references/adk-python/contributing/samples/workflows/dynamic_nodes/agent.py),
+the terminal-output shape in
+[`use_as_output`](../adk-references/adk-python/contributing/samples/workflows/use_as_output/agent.py),
+and the programmatic routing approach in the
+[`custom orchestrator` pattern](../adk-references/adk-workflow-patterns/collaborative-workflows/examples/04_custom_orchestrator.py).
+The underlying behavior is defined by ADK's
+[`Workflow`](../adk-references/adk-python/src/google/adk/workflow/_workflow.py),
+[`Context.run_node()`](../adk-references/adk-python/src/google/adk/agents/context.py),
+and [`Event`](../adk-references/adk-python/src/google/adk/events/event.py)
+implementations.
+
+The main alternatives were rejected for architectural reasons:
+
+- Chat transfer was unsuitable because a sub-agent would own the conversation
+  instead of returning a result to its caller.
+- A chat root with agent or Workflow tools still leaves completion inside an
+  open-ended model tool loop, which is the re-entry failure seen in the trace.
+- A fixed sequential pipeline would run unnecessary departments and
+  specialists instead of allowing selective delegation.
+- Parallel fan-out/fan-in would be wasteful and incorrect when later work
+  depends on an earlier result; it remains appropriate only for independently
+  required branches.
+- Persistent state as a result mailbox was avoided because these values belong
+  to one invocation; explicit returned values and `temp:` state prevent stale
+  cross-turn data.
+
+In short, managers supply judgment, controllers enforce the allowed topology
+and step budget, dynamic calls provide child-style call/return behavior, and
+the root Workflow provides deterministic termination.
