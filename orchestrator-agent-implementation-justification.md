@@ -62,7 +62,7 @@ The design directly satisfies the requested behavioral contract:
 - no transfer-to-agent operation is used for call or return;
 - no specialist can be selected twice in one invocation;
 - workflow completion, rather than prompt compliance alone, ends execution;
-- the existing [`hello_agent/`](hello_agent/) implementation is unchanged.
+- the existing [`hierarchical_agent/`](hierarchical_agent/) implementation is unchanged.
 
 ## Reference findings
 

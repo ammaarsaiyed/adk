@@ -219,7 +219,7 @@ def render_result(node_input: OutputPlaceholder) -> Event:
 
 
 root_agent = Workflow(
-    name="hello_agent",
+    name="hierarchical_agent",
     description="Routes requests through only the necessary specialist teams.",
     input_schema=str,
     output_schema=OutputPlaceholder,

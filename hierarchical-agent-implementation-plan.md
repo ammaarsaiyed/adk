@@ -15,7 +15,7 @@ rendering node. Each department uses the same pattern for its specialists.
 
 ```text
 user
-  -> hello_agent Workflow
+  -> hierarchical_agent Workflow
        -> root_controller
             -> root_manager [one decision]
                  -> finish, or delegate one necessary department
@@ -51,10 +51,10 @@ open-ended function-calling loop.
 
 [`latest_trace.json`](latest_trace.json) shows the failure boundary clearly:
 
-1. `hello_agent` calls `writing_department`.
+1. `hierarchical_agent` calls `writing_department`.
 2. The writing manager runs the writer and proofreader.
 3. The department Workflow completes.
-4. `hello_agent` receives the matching `writing_department` function response.
+4. `hierarchical_agent` receives the matching `writing_department` function response.
 5. There is no final root text event after that response.
 
 At that point the root has not structurally terminated. It must be called again
@@ -217,7 +217,7 @@ in the controller's closed target map rather than proliferating schema classes.
 ## Implemented topology and file layout
 
 ```text
-hello_agent/
+hierarchical_agent/
   agent.py                       # controllers, Workflows, final renderer
   schemas.py                     # three generic contracts
   settings.py                    # model selection
@@ -230,11 +230,11 @@ hello_agent/
     writer.py                    # writer = Agent(...)
     proofreader.py               # proofreader = Agent(...)
 tests/
-  test_agent.py                  # deterministic hierarchy regressions
+  test_hierarchical_agent.py     # deterministic hierarchy regressions
 ```
 
 Each agent is declared directly in its own module. There are no agent factory
-or `make_*` helpers. [`hello_agent/agent.py`](hello_agent/agent.py) contains only
+or `make_*` helpers. [`hierarchical_agent/agent.py`](hierarchical_agent/agent.py) contains only
 orchestration: the reusable bounded hierarchy loop, the three controllers, the
 two nested department Workflows, the final renderer, and root Workflow wiring.
 
@@ -300,13 +300,13 @@ prove behavior through the public runner and emitted events:
 Validation command:
 
 ```text
-python -m unittest tests.test_agent -v
+python -m unittest tests.test_hierarchical_agent -v
 ```
 
 All four tests pass. The source also compiles with:
 
 ```text
-python -m compileall -q hello_agent tests
+python -m compileall -q hierarchical_agent tests
 ```
 
 `pytest` and `pyink` are not installed in the current project environment, so
@@ -339,15 +339,15 @@ those commands were not used.
 
 - [`latest_trace.json`](latest_trace.json) — prior run ending at the root's
   department function response without a final root text event.
-- [`hierarchical-agent-final-investigation.md`](hierarchical-agent-final-investigation.md)
+- [`hierarchical-agent-final-investigation.md`](archive/hierarchical-agent-final-investigation.md)
   — original control-flow investigation and rejected recursive designs.
-- [`hello_agent/agent.py`](hello_agent/agent.py) — selective controllers,
+- [`hierarchical_agent/agent.py`](hierarchical_agent/agent.py) — selective controllers,
   nested Workflows, state events, and deterministic terminal renderer.
-- [`hello_agent/agents/`](hello_agent/agents/) — one directly configured LLM
+- [`hierarchical_agent/agents/`](hierarchical_agent/agents/) — one directly configured LLM
   agent per module.
-- [`hello_agent/schemas.py`](hello_agent/schemas.py) — generic input, output,
+- [`hierarchical_agent/schemas.py`](hierarchical_agent/schemas.py) — generic input, output,
   and manager-decision contracts.
-- [`tests/test_agent.py`](tests/test_agent.py) — deterministic regression tests.
+- [`tests/test_hierarchical_agent.py`](tests/test_hierarchical_agent.py) — deterministic regression tests.
 
 ### ADK source and official samples
 
@@ -399,7 +399,7 @@ tests determine which combination is appropriate here.
 | `root_controller`, `research_controller`, and `writing_controller` | [`Context.run_node()`](../adk-references/adk-python/src/google/adk/agents/context.py) and the [`dynamic_nodes` sample](../adk-references/adk-python/contributing/samples/workflows/dynamic_nodes/agent.py) | Each controller awaits a selected child and receives its return value through the supported dynamic-node API. Child events remain traceable, while Python retains control of routing, validation, and completion. |
 | Generic `_run_hierarchy` bounded loop | [`dynamic_nodes` sample](../adk-references/adk-python/contributing/samples/workflows/dynamic_nodes/agent.py) and the supporting [`custom orchestrator` pattern](../adk-references/adk-workflow-patterns/collaborative-workflows/examples/04_custom_orchestrator.py) | Both demonstrate programmatic routing after inspecting state or child results. The local implementation generalizes that pattern across root and department levels, adds a closed target map, duplicate prevention, typed decisions, and a hard step budget. |
 | One `ManagerDecision` per manager call | [`LLM agent Workflow wrapper`](../adk-references/adk-python/src/google/adk/workflow/_llm_agent_wrapper.py) and [`Node schema validation`](../adk-references/adk-python/src/google/adk/utils/_schema_utils.py) | A single-turn agent node produces one validated value for its caller. The shared `delegate`/`finish` contract limits the model to choosing the next action; it cannot execute children or control the loop itself. |
-| Selective execution rather than fixed sequence or fan-out | [`Context.run_node()`](../adk-references/adk-python/src/google/adk/agents/context.py) and the local requirements proved in [`tests/test_agent.py`](tests/test_agent.py) | Imperative dynamic calls allow exactly one chosen child to run. This is why proofreading can run without writing and why an unnecessary summarizer is skipped. Parallel fan-out is reserved for a future case where all selected branches are independently required. |
+| Selective execution rather than fixed sequence or fan-out | [`Context.run_node()`](../adk-references/adk-python/src/google/adk/agents/context.py) and the local requirements proved in [`tests/test_hierarchical_agent.py`](tests/test_hierarchical_agent.py) | Imperative dynamic calls allow exactly one chosen child to run. This is why proofreading can run without writing and why an unnecessary summarizer is skipped. Parallel fan-out is reserved for a future case where all selected branches are independently required. |
 | `include_contents="none"` on every LLM agent | [`LLM content construction`](../adk-references/adk-python/src/google/adk/flows/llm_flows/contents.py) | ADK then excludes prior conversation history and builds only the current turn context. This prevents child events and earlier parent tool history from silently influencing a later routing decision. |
 | `{temp:...}` placeholders in agent instructions | [`Instruction state injection`](../adk-references/adk-python/src/google/adk/utils/instructions_utils.py) and the [`dynamic_nodes` sample](../adk-references/adk-python/contributing/samples/workflows/dynamic_nodes/agent.py) | ADK explicitly resolves required and optional state variables in instructions. The application uses this supported mechanism to make every request, selected instruction, prior result, and available-target list visible and auditable. |
 | Invocation-scoped `output_key="temp:..."` | [`LlmAgent.output_key`](../adk-references/adk-python/src/google/adk/agents/llm_agent.py) and [`State scopes`](../adk-references/adk-python/src/google/adk/sessions/state.py) | Each validated LLM result is named for later placeholder injection, while `temp:` prevents it from leaking into later user turns. The immediate caller still validates the direct `run_node()` return, so state is context rather than an implicit RPC mailbox. |
@@ -407,7 +407,7 @@ tests determine which combination is appropriate here.
 | `InputPlaceholder`, `OutputPlaceholder`, and `ManagerDecision` | [`Node schema validation`](../adk-references/adk-python/src/google/adk/utils/_schema_utils.py) | ADK validates typed node boundaries and serializes Pydantic values. Three generic contracts retain that safety without multiplying equivalent domain-specific output classes. |
 | Stable non-numeric `run_id` plus `use_sub_branch=True` | [`Context.run_node()`](../adk-references/adk-python/src/google/adk/agents/context.py) and [`Workflow`](../adk-references/adk-python/src/google/adk/workflow/_workflow.py) | Stable paths allow ADK to correlate and deduplicate dynamic executions during replay. Sub-branches isolate child event histories while preserving observability in the trace. |
 | No root function tools, `NodeTool`, transfers, or agent `sub_agents` | [`latest_trace.json`](latest_trace.json), [`NodeTool`](../adk-references/adk-python/src/google/adk/tools/_node_tool.py), and the [`LLM agent Workflow wrapper`](../adk-references/adk-python/src/google/adk/workflow/_llm_agent_wrapper.py) | The trace showed that the async adapter still ended at a root function response without structural completion; direct node tools also expose long-running semantics. Removing the tool/transfer layer eliminates both the false UI input boundary and the open-ended parent re-entry path. |
-| Public-runner regression tests | [`InMemoryRunner`](../adk-references/adk-python/src/google/adk/runners.py) and [`tests/test_agent.py`](tests/test_agent.py) | Tests exercise the same invocation and event surface used by the application. They assert selective child execution, one terminal answer, explicit state injection, no transfers, and no long-running tool metadata rather than asserting private controller internals. |
+| Public-runner regression tests | [`InMemoryRunner`](../adk-references/adk-python/src/google/adk/runners.py) and [`tests/test_hierarchical_agent.py`](tests/test_hierarchical_agent.py) | Tests exercise the same invocation and event surface used by the application. They assert selective child execution, one terminal answer, explicit state injection, no transfers, and no long-running tool metadata rather than asserting private controller internals. |
 
 The table also defines the change boundary: replacing the manager prompts or
 specialist capabilities is safe when the contracts remain intact, but restoring

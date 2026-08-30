@@ -14,14 +14,14 @@ from google.adk.workflow import BaseNode
 from google.genai import types
 from pydantic import Field
 
-from hello_agent.agent import root_agent
-from hello_agent.agents.proofreader import proofreader
-from hello_agent.agents.research_manager import research_manager
-from hello_agent.agents.researcher import researcher
-from hello_agent.agents.root_manager import root_manager
-from hello_agent.agents.summarizer import summarizer
-from hello_agent.agents.writer import writer
-from hello_agent.agents.writing_manager import writing_manager
+from hierarchical_agent.agent import root_agent
+from hierarchical_agent.agents.proofreader import proofreader
+from hierarchical_agent.agents.research_manager import research_manager
+from hierarchical_agent.agents.researcher import researcher
+from hierarchical_agent.agents.root_manager import root_manager
+from hierarchical_agent.agents.summarizer import summarizer
+from hierarchical_agent.agents.writer import writer
+from hierarchical_agent.agents.writing_manager import writing_manager
 
 
 _LLM_AGENTS = (
@@ -172,7 +172,7 @@ class HierarchicalAgentTest(unittest.IsolatedAsyncioTestCase):
     final_texts = [
         part.text
         for event in events
-        if event.author == "hello_agent"
+        if event.author == "hierarchical_agent"
         and event.content
         and event.content.parts
         for part in event.content.parts
@@ -282,7 +282,7 @@ class HierarchicalAgentTest(unittest.IsolatedAsyncioTestCase):
         [
             part.text
             for event in events
-            if event.author == "hello_agent"
+            if event.author == "hierarchical_agent"
             and event.content
             and event.content.parts
             for part in event.content.parts
